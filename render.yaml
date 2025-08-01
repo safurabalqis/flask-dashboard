@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: flask-dashboard
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: USE_REMOTE_DB
+        value: true
